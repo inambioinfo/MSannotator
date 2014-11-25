@@ -51,6 +51,14 @@ public class MSannotatorApplication extends JFrame implements ActionListener
 
         if ( actionEvent.getActionCommand() == "Exit" ) {
             System.exit(0);
+        } else if ( actionEvent.getActionCommand() == "Import ..." ) {
+
+            /* TODO: Implement import of mzml data
+             *
+             * The application would open a dialog allowing a user to specify the mzml file to import.
+             * 
+             */
+
         } else {
             System.err.println("Unimplemented action called " + actionEvent.getActionCommand());
         }
