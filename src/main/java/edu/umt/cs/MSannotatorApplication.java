@@ -5,14 +5,20 @@ import java.awt.*;
 import edu.umt.cs.ui.MSannotatorApplicationJMenuBar;
 
 /**
- * Hello world!
- *
+ * MSannotator is a data visualization application for rendering multivariate plots
+ * of data related to mass spectrometry. This is the heavyweight container hosting the
+ * application components.
  */
 public class MSannotatorApplication extends JFrame
 {
 
     private static MSannotatorApplicationJMenuBar sSannotatorApplicationJMenuBar;
 
+    /**
+     * The application entry point is called at this point, typical of all java applications.
+     *
+     * @param args A string array of command line arguments.
+     */
     public static void main( String[] args )
     {
         EventQueue.invokeLater(new Runnable() {
