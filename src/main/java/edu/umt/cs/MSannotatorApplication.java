@@ -2,6 +2,9 @@ package edu.umt.cs;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import edu.umt.cs.ui.MSannotatorApplicationJMenuBar;
 
 /**
@@ -9,7 +12,7 @@ import edu.umt.cs.ui.MSannotatorApplicationJMenuBar;
  * of data related to mass spectrometry. This is the heavyweight container hosting the
  * application components.
  */
-public class MSannotatorApplication extends JFrame
+public class MSannotatorApplication extends JFrame implements ActionListener
 {
 
     private static MSannotatorApplicationJMenuBar sSannotatorApplicationJMenuBar;
@@ -41,5 +44,15 @@ public class MSannotatorApplication extends JFrame
             }
 
         });
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent actionEvent) {
+
+        if ( actionEvent.getActionCommand() == "Exit" ) {
+            System.exit(0);
+        } else {
+            System.err.println("Unimplemented action called " + actionEvent.getActionCommand());
+        }
     }
 }

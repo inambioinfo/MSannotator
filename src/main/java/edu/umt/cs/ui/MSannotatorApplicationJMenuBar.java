@@ -14,19 +14,15 @@ public class MSannotatorApplicationJMenuBar extends JMenuBar {
 
     private JMenuItem mFileMenuExitItem;
 
-    public MSannotatorApplicationJMenuBar(final JFrame container) {
+    public MSannotatorApplicationJMenuBar(final ActionListener container) {
 
         // Build File Menu
         mFileMenu = new JMenu("File");
         mFileMenu.setMnemonic(KeyEvent.VK_F);
+
         mFileMenuExitItem = new JMenuItem("Exit", KeyEvent.VK_X);
 
-        mFileMenuExitItem.addActionListener( new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent actionEvent) {
-                System.exit(0);
-            }
-        });
+        mFileMenuExitItem.addActionListener(container);
 
         // Add Items to menu
         mFileMenu.add(mFileMenuExitItem);
